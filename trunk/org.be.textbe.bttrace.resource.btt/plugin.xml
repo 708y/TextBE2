@@ -6,7 +6,7 @@
 		</metaInformationProvider>
 	</extension>
 	
-	<extension id="org.be.textbe.bttrace.resource.btt.problem" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+	<extension id="org.be.textbe.bttrace.resource.btt.problem" name="%extension.name" point="org.eclipse.core.resources.markers">
 		<persistent value="true">
 		</persistent>
 		<super type="org.eclipse.core.resources.problemmarker">
@@ -17,42 +17,42 @@
 		</super>
 	</extension>
 	
-	<extension id="org.be.textbe.bttrace.resource.btt.problem.syntax_error" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+	<extension id="org.be.textbe.bttrace.resource.btt.problem.syntax_error" name="%extension.name.0" point="org.eclipse.core.resources.markers">
 		<persistent value="true">
 		</persistent>
 		<super type="org.be.textbe.bttrace.resource.btt.problem">
 		</super>
 	</extension>
 	
-	<extension id="org.be.textbe.bttrace.resource.btt.problem.print_problem" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+	<extension id="org.be.textbe.bttrace.resource.btt.problem.print_problem" name="%extension.name.1" point="org.eclipse.core.resources.markers">
 		<persistent value="true">
 		</persistent>
 		<super type="org.be.textbe.bttrace.resource.btt.problem">
 		</super>
 	</extension>
 	
-	<extension id="org.be.textbe.bttrace.resource.btt.problem.unresolved_reference" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+	<extension id="org.be.textbe.bttrace.resource.btt.problem.unresolved_reference" name="%extension.name.2" point="org.eclipse.core.resources.markers">
 		<persistent value="true">
 		</persistent>
 		<super type="org.be.textbe.bttrace.resource.btt.problem">
 		</super>
 	</extension>
 	
-	<extension id="org.be.textbe.bttrace.resource.btt.problem.analysis_problem" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+	<extension id="org.be.textbe.bttrace.resource.btt.problem.analysis_problem" name="%extension.name.3" point="org.eclipse.core.resources.markers">
 		<persistent value="true">
 		</persistent>
 		<super type="org.be.textbe.bttrace.resource.btt.problem">
 		</super>
 	</extension>
 	
-	<extension id="org.be.textbe.bttrace.resource.btt.problem.builder_error" name="EMFText Problem" point="org.eclipse.core.resources.markers">
+	<extension id="org.be.textbe.bttrace.resource.btt.problem.builder_error" name="%extension.name.4" point="org.eclipse.core.resources.markers">
 		<persistent value="true">
 		</persistent>
 		<super type="org.be.textbe.bttrace.resource.btt.problem">
 		</super>
 	</extension>
 	
-	<extension id="org.be.textbe.bttrace.resource.btt.nature" name="btt nature" point="org.eclipse.core.resources.natures">
+	<extension id="org.be.textbe.bttrace.resource.btt.nature" name="%extension.name.5" point="org.eclipse.core.resources.natures">
 		<runtime>
 			<run class="org.be.textbe.bttrace.resource.btt.mopp.BttNature">
 			</run>
@@ -61,14 +61,14 @@
 		</builder>
 	</extension>
 	
-	<extension point="org.eclipse.core.resources.builders" id="org.be.textbe.bttrace.resource.btt.builder" name="btt Builder">
+	<extension point="org.eclipse.core.resources.builders" id="org.be.textbe.bttrace.resource.btt.builder" name="%extension.name.6">
 		<builder hasNature="true">
 			<run class="org.be.textbe.bttrace.resource.btt.mopp.BttBuilderAdapter">
 			</run>
 		</builder>
 	</extension>
 	
-	<extension-point id="org.be.textbe.bttrace.resource.btt.default_load_options" name="Default Load Options" schema="schema/default_load_options.exsd">
+	<extension-point id="org.be.textbe.bttrace.resource.btt.default_load_options" name="%extension-point.name" schema="schema/default_load_options.exsd">
 	</extension-point>
 	
 	<extension point="org.eclipse.emf.ecore.extension_parser">
@@ -76,11 +76,11 @@
 		</parser>
 	</extension>
 	
-	<extension-point id="org.be.textbe.bttrace.resource.btt.additional_extension_parser" name="Additional Extension Parser" schema="schema/additional_extension_parser.exsd">
+	<extension-point id="org.be.textbe.bttrace.resource.btt.additional_extension_parser" name="%extension-point.name.0" schema="schema/additional_extension_parser.exsd">
 	</extension-point>
 	
 	<extension point="org.eclipse.debug.core.breakpoints">
-		<breakpoint class="org.be.textbe.bttrace.resource.btt.debug.BttLineBreakpoint" id="org.be.textbe.bttrace.resource.btt.debug.breakpoint" markerType="org.be.textbe.bttrace.resource.btt.debug.lineBreakpoint.marker" name="btt Breakpoint">
+		<breakpoint class="org.be.textbe.bttrace.resource.btt.debug.BttLineBreakpoint" id="org.be.textbe.bttrace.resource.btt.debug.breakpoint" markerType="org.be.textbe.bttrace.resource.btt.debug.lineBreakpoint.marker" name="%breakpoint.name">
 		</breakpoint>
 	</extension>
 	
@@ -94,7 +94,7 @@
 	</extension>
 	
 	<extension point="org.eclipse.debug.core.launchConfigurationTypes">
-		<launchConfigurationType id="org.be.textbe.bttrace.resource.btt.ui.launchConfigurationType" delegate="org.be.textbe.bttrace.resource.btt.launch.BttLaunchConfigurationDelegate" modes="run,debug" name="btt Application" sourceLocatorId="org.be.textbe.bttrace.resource.btt.ui.sourceLocator" sourcePathComputerId="org.be.textbe.bttrace.resource.btt.ui.sourcePathComputer" delegateName="btt Launch Tooling" delegateDescription="This will run or debug .btt files.">
+		<launchConfigurationType id="org.be.textbe.bttrace.resource.btt.ui.launchConfigurationType" delegate="org.be.textbe.bttrace.resource.btt.launch.BttLaunchConfigurationDelegate" modes="run,debug" name="%launchConfigurationType.name" sourceLocatorId="org.be.textbe.bttrace.resource.btt.ui.sourceLocator" sourcePathComputerId="org.be.textbe.bttrace.resource.btt.ui.sourcePathComputer" delegateName="%launchConfigurationType.delegateName" delegateDescription="%launchConfigurationType.delegateDescription">
 		</launchConfigurationType>
 	</extension>
 	
@@ -104,7 +104,7 @@
 	</extension>
 	
 	<extension point="org.eclipse.debug.core.sourceLocators">
-		<sourceLocator id="org.be.textbe.bttrace.resource.btt.ui.sourceLocator" class="org.be.textbe.bttrace.resource.btt.debug.BttSourceLocator" name="btt Source Locator">
+		<sourceLocator id="org.be.textbe.bttrace.resource.btt.ui.sourceLocator" class="org.be.textbe.bttrace.resource.btt.debug.BttSourceLocator" name="%sourceLocator.name">
 		</sourceLocator>
 	</extension>
 	
